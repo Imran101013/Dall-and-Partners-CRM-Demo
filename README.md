@@ -2,7 +2,7 @@
 
 A clickable HTML prototype of the system proposed for Dall & Partners, based on the **free versions** of the WordPress plugins (Fluent Forms, FluentCRM, FluentBooking, Fluent Boards, WP Project Manager, WP Customer Area, Better Messages).
 
-- **Website:** consultation popup, Thank You page with booking calendar, Program Finder (all 25 programs), free guide, blog "next step" box.
+- **Website:** consultation page, Thank You page with booking calendar, Program Finder (all 25 programs), free guide, blog "next step" box.
 - **CRM (staff):** contacts, contact records, follow-up emails, weekly reminder, bookings, availability, sales pipeline (drag and drop), manual tasks list.
 - **Client portal:** projects (cases), task lists, calendar, team chat, client dashboard.
 

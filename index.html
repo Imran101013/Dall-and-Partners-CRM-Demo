@@ -358,7 +358,7 @@ var Q = [
   ];
 
 
-var KEY = 'dp-prototype-v3';
+var KEY = 'dp-prototype-v4';
 var ADVISORS = ['Tehreema Khan', 'Khushbakht H.', 'Farrukh Dall'];
 var LISTS = ['Consultation enquiries', 'Program Finder leads', 'Guide downloads', 'Newsletter', 'Clients – signed'];
 var TAGS = ['CBI', 'Golden Visa', 'Real Estate', 'Entrepreneur', 'Independent Means', 'Digital Nomad', 'Not sure',
@@ -401,14 +401,14 @@ function seed() {
       seq: null, message: msg || '' };
   }
   var c = [
-    C('Ahmed Khan', 'ahmed.khan@example.com', '+92 300 1234567', 'Pakistan', 'Golden Visa / Residency by Investment', 'US$300,000 – US$600,000', 'In 1–3 months', 'Website popup', ['Consultation enquiries'], ['Golden Visa', 'Budget – 300k-600k', 'Source – website', 'Consultation booked'], 9, 'Applying with spouse and 2 children; interested in Greece or Portugal.'),
+    C('Ahmed Khan', 'ahmed.khan@example.com', '+92 300 1234567', 'Pakistan', 'Golden Visa / Residency by Investment', 'US$300,000 – US$600,000', 'In 1–3 months', 'Consultation page', ['Consultation enquiries'], ['Golden Visa', 'Budget – 300k-600k', 'Source – website', 'Consultation booked'], 9, 'Applying with spouse and 2 children; interested in Greece or Portugal.'),
     C('Sara Malik', 'sara.malik@example.com', '+971 50 555 0192', 'UAE', 'Citizenship by Investment', 'US$150,000 – US$300,000', 'Immediately (within 1 month)', 'Program Finder', ['Consultation enquiries', 'Program Finder leads'], ['CBI', 'Source – website'], 4, 'Program Finder answers – Goal: A second passport; Budget: US$150,000 – 300,000; Family: Spouse and children; Priority: Visa-free travel in Europe; Timeline: Immediately. Matches: Dominica Citizenship, Nauru Citizenship, Vanuatu Citizenship.'),
     C('James Whitfield', 'james.w@example.com', '+44 7700 900123', 'United Kingdom', 'Retirement / Passive Income Visa', 'No investment – income or savings', 'In 3–6 months', 'Guide download', ['Guide downloads'], ['Source – website'], 12),
-    C('Li Wei', 'li.wei@example.com', '+86 138 0013 8000', 'China', 'Golden Visa / Residency by Investment', 'US$600,000 – US$1 million', 'In 6–12 months', 'Website popup', ['Consultation enquiries'], ['Golden Visa', 'Budget – 600k plus', 'Source – website', 'Consultation booked', 'Proposal sent'], 20),
+    C('Li Wei', 'li.wei@example.com', '+86 138 0013 8000', 'China', 'Golden Visa / Residency by Investment', 'US$600,000 – US$1 million', 'In 6–12 months', 'Consultation page', ['Consultation enquiries'], ['Golden Visa', 'Budget – 600k plus', 'Source – website', 'Consultation booked', 'Proposal sent'], 20),
     C('Omar Haddad', 'omar.h@example.com', '+966 55 123 4567', 'Saudi Arabia', 'Real Estate Residency', 'US$150,000 – US$300,000', 'In 1–3 months', 'WhatsApp', ['Consultation enquiries'], ['Real Estate', 'Source – WhatsApp'], 2),
     C('Priya Nair', 'priya.nair@example.com', '+91 98765 43210', 'India', 'Digital Nomad / Remote Work Visa', 'No investment – income or savings', 'Immediately (within 1 month)', 'Guide download', ['Guide downloads'], ['Source – website'], 1),
     C('Daniel Costa', 'daniel.costa@example.com', '+1 416 555 0144', 'Canada', 'Entrepreneur / Business Visa', 'Under US$50,000', 'In 1–3 months', 'Referral', ['Consultation enquiries'], ['Entrepreneur', 'Source – referral'], 6),
-    C('Fatima Zahra', 'fatima.z@example.com', '+212 600 112233', 'Morocco', 'Citizenship by Investment', 'US$300,000 – US$600,000', 'In 3–6 months', 'Website popup', ['Clients – signed'], ['CBI', 'Won', 'Source – website'], 40)
+    C('Fatima Zahra', 'fatima.z@example.com', '+212 600 112233', 'Morocco', 'Citizenship by Investment', 'US$300,000 – US$600,000', 'In 3–6 months', 'Consultation page', ['Clients – signed'], ['CBI', 'Won', 'Source – website'], 40)
   ];
   c[0].advisor = 'Tehreema Khan'; c[0].notes.push({ by: 'Tehreema Khan', date: iso(addDays(t, -7)), text: 'First call held. Prefers Greece (property). Sending comparison of €400k vs €250k conversion options.' });
   c[3].advisor = 'Farrukh Dall'; c[3].notes.push({ by: 'Farrukh Dall', date: iso(addDays(t, -10)), text: 'Proposal sent for Portugal Golden Visa (fund route). Follow up next week.' });
@@ -433,19 +433,19 @@ function seed() {
   ];
   // ---- more sample contacts ----
   var more = [
-    ['Michael Brandt', 'm.brandt@example.com', '+49 151 2345 6789', 'Germany', 'Golden Visa / Residency by Investment', 'US$300,000 – US$600,000', 'In 1–3 months', 'Website popup', ['Clients – signed'], ['Golden Visa', 'Budget – 300k-600k', 'Won', 'Source – website'], 70, 'Portugal Golden Visa through funds; wife and one daughter.', 'Farrukh Dall'],
+    ['Michael Brandt', 'm.brandt@example.com', '+49 151 2345 6789', 'Germany', 'Golden Visa / Residency by Investment', 'US$300,000 – US$600,000', 'In 1–3 months', 'Consultation page', ['Clients – signed'], ['Golden Visa', 'Budget – 300k-600k', 'Won', 'Source – website'], 70, 'Portugal Golden Visa through funds; wife and one daughter.', 'Farrukh Dall'],
     ['Aisha Rahman', 'aisha.rahman@example.com', '+44 7911 123456', 'United Kingdom', 'Golden Visa / Residency by Investment', 'US$300,000 – US$600,000', 'In 1–3 months', 'Program Finder', ['Clients – signed'], ['Golden Visa', 'Budget – 300k-600k', 'Won', 'Source – website'], 55, 'Program Finder answers – Goal: A residence permit or Plan B; Budget: US$300,000 – 600,000; Family: Spouse and children; Priority: Visa-free travel in Europe; Timeline: In 1–3 months. Matches: Greece Golden Visa, Hungary Guest Investor Program, Latvia Golden Visa.', 'Tehreema Khan'],
     ['Carlos Mendes', 'carlos.mendes@example.com', '+55 11 98765 4321', 'Brazil', 'Digital Nomad / Remote Work Visa', 'No investment – income or savings', 'Immediately (within 1 month)', 'Guide download', ['Clients – signed'], ['Digital Nomad', 'Won', 'Source – website'], 48, '', 'Khushbakht H.'],
     ['Hiroshi Tanaka', 'h.tanaka@example.com', '+81 90 1234 5678', 'Japan', 'Golden Visa / Residency by Investment', 'US$600,000 – US$1 million', 'In 1–3 months', 'Referral', ['Clients – signed'], ['Golden Visa', 'Budget – 600k plus', 'Won', 'Source – referral'], 120, 'Dubai property already purchased; needs Golden Visa for family.', 'Farrukh Dall'],
     ['Elena Petrova', 'elena.p@example.com', '+359 88 123 4567', 'Bulgaria', 'Retirement / Passive Income Visa', 'No investment – income or savings', 'In 3–6 months', 'Guide download', ['Guide downloads', 'Consultation enquiries'], ['Independent Means', 'Budget – no investment', 'Source – website', 'Consultation booked'], 8, 'Retiring next year; pension about €2,400 a month. Portugal or Spain.', 'Tehreema Khan'],
     ['Rashid Al-Mansoori', 'rashid.m@example.com', '+971 55 987 6543', 'UAE', 'Citizenship by Investment', 'US$600,000 – US$1 million', 'In 1–3 months', 'Phone', ['Consultation enquiries'], ['CBI', 'Budget – 600k plus', 'Source – phone', 'Proposal sent'], 15, 'Interested in Türkiye citizenship through real estate in Istanbul.', 'Farrukh Dall'],
-    ['Grace Okafor', 'grace.okafor@example.com', '+234 803 123 4567', 'Nigeria', 'Citizenship by Investment', 'US$150,000 – US$300,000', 'In 1–3 months', 'Website popup', ['Consultation enquiries'], ['CBI', 'Budget – 150k-300k', 'Source – website', 'Consultation booked'], 5, 'Looking for visa-free travel to Europe for business; family of five.', 'Khushbakht H.'],
-    ['Thomas Müller', 'thomas.mueller@example.com', '+41 79 123 45 67', 'Switzerland', 'Entrepreneur / Business Visa', 'US$50,000 – US$150,000', 'In 3–6 months', 'Website popup', ['Consultation enquiries'], ['Entrepreneur', 'Budget – 50k-150k', 'Source – website'], 3, 'Wants to open an IT consultancy in Montenegro.', ''],
-    ['Nadia Haddad', 'nadia.haddad@example.com', '+961 3 123 456', 'Lebanon', 'Golden Visa / Residency by Investment', 'US$150,000 – US$300,000', 'In 6–12 months', 'Website popup', ['Consultation enquiries', 'Newsletter'], ['Golden Visa', 'Budget – 150k-300k', 'Source – website', 'Lost'], 34, 'Decided to wait until next year.', 'Tehreema Khan'],
+    ['Grace Okafor', 'grace.okafor@example.com', '+234 803 123 4567', 'Nigeria', 'Citizenship by Investment', 'US$150,000 – US$300,000', 'In 1–3 months', 'Consultation page', ['Consultation enquiries'], ['CBI', 'Budget – 150k-300k', 'Source – website', 'Consultation booked'], 5, 'Looking for visa-free travel to Europe for business; family of five.', 'Khushbakht H.'],
+    ['Thomas Müller', 'thomas.mueller@example.com', '+41 79 123 45 67', 'Switzerland', 'Entrepreneur / Business Visa', 'US$50,000 – US$150,000', 'In 3–6 months', 'Consultation page', ['Consultation enquiries'], ['Entrepreneur', 'Budget – 50k-150k', 'Source – website'], 3, 'Wants to open an IT consultancy in Montenegro.', ''],
+    ['Nadia Haddad', 'nadia.haddad@example.com', '+961 3 123 456', 'Lebanon', 'Golden Visa / Residency by Investment', 'US$150,000 – US$300,000', 'In 6–12 months', 'Consultation page', ['Consultation enquiries', 'Newsletter'], ['Golden Visa', 'Budget – 150k-300k', 'Source – website', 'Lost'], 34, 'Decided to wait until next year.', 'Tehreema Khan'],
     ['Arjun Mehta', 'arjun.mehta@example.com', '+91 99887 66554', 'India', 'Digital Nomad / Remote Work Visa', 'No investment – income or savings', 'In 1–3 months', 'Program Finder', ['Consultation enquiries', 'Program Finder leads'], ['Digital Nomad', 'Source – website'], 2, 'Program Finder answers – Goal: Live abroad and work remotely; Budget: No investment; Family: Just me; Priority: Low or no tax; Timeline: In 1–3 months. Matches: Malaysia DE Rantau Nomad Pass, Albania Digital Nomad Permit, Portugal D8 Digital Nomad Visa.', ''],
     ['Sophie Laurent', 'sophie.laurent@example.com', '+33 6 12 34 56 78', 'France', 'Real Estate Residency', 'US$150,000 – US$300,000', 'In 3–6 months', 'Guide download', ['Guide downloads'], ['Source – website'], 6, '', ''],
     ['Bilal Chaudhry', 'bilal.c@example.com', '+92 333 5551234', 'Pakistan', 'Citizenship by Investment', 'US$50,000 – US$150,000', 'Immediately (within 1 month)', 'WhatsApp', ['Consultation enquiries'], ['CBI', 'Budget – 50k-150k', 'Source – WhatsApp'], 1, 'Asked about Nauru limited offer on WhatsApp.', ''],
-    ['Maria Gonzalez', 'maria.gonzalez@example.com', '+52 55 1234 5678', 'Mexico', 'Golden Visa / Residency by Investment', 'US$300,000 – US$600,000', 'In 3–6 months', 'Website popup', ['Consultation enquiries'], ['Golden Visa', 'Budget – 300k-600k', 'Source – website', 'Consultation booked'], 11, 'Comparing Hungary and Greece; wants no minimum stay.', 'Khushbakht H.'],
+    ['Maria Gonzalez', 'maria.gonzalez@example.com', '+52 55 1234 5678', 'Mexico', 'Golden Visa / Residency by Investment', 'US$300,000 – US$600,000', 'In 3–6 months', 'Consultation page', ['Consultation enquiries'], ['Golden Visa', 'Budget – 300k-600k', 'Source – website', 'Consultation booked'], 11, 'Comparing Hungary and Greece; wants no minimum stay.', 'Khushbakht H.'],
     ['Kwame Mensah', 'kwame.m@example.com', '+233 24 123 4567', 'Ghana', 'Entrepreneur / Business Visa', 'Under US$50,000', 'Just researching for now', 'Guide download', ['Guide downloads', 'Newsletter'], ['Source – website'], 25, '', '']
   ];
   var M = more.map(function (r) { var x = C(r[0], r[1], r[2], r[3], r[4], r[5], r[6], r[7], r[8], r[9], r[10], r[11]); x.advisor = r[12]; return x; });
@@ -539,22 +539,26 @@ function go(area, view, id, tab) { R.area = area; R.view = view; R.id = id || nu
 /* ---------- frames ---------- */
 function frame(url, sub, inner) { return '<div class="browser"><div class="bbar"><div class="dots" aria-hidden="true"><span></span><span></span><span></span></div><div class="url"><b>🔒</b>' + esc(url) + '</div></div>' + (sub || '') + inner + '</div>'; }
 function subnav(label, items, cur) { return '<nav class="subnav" aria-label="' + esc(label) + '"><span>' + esc(label) + ':</span>' + items.map(function (i) { return '<button data-go="' + i[0] + '" class="' + (i[0] === cur ? 'on' : '') + '">' + esc(i[1]) + '</button>'; }).join('') + '</nav>'; }
-function siteHead() { return '<header class="s-head"><a class="logo" data-go="site:home" href="#"><i></i><span><b>DALL&amp;PARTNERS</b><small>Residency and Citizenship</small></span></a><nav class="s-nav" aria-label="Site"><a>Citizenship (CBI)</a><a>Residency (RBI)</a><a>Real Estate</a><a data-go="site:blog">Insights</a><a>About Us</a></nav><button class="btn btn-gold btn-sm" data-act="consult">Book a Consultation</button></header>'; }
+function siteHead() { return '<header class="s-head"><a class="logo" data-go="site:home" href="#"><i></i><span><b>DALL&amp;PARTNERS</b><small>Residency and Citizenship</small></span></a><nav class="s-nav" aria-label="Site"><a>Citizenship (CBI)</a><a>Residency (RBI)</a><a>Real Estate</a><a data-go="site:blog">Insights</a><a>About Us</a></nav><button class="btn btn-gold btn-sm" data-go="site:consult">Book a Consultation</button></header>'; }
 function siteFoot() { return '<footer class="s-foot"><span>© Dall &amp; Partners · Demo copy of dallandpartners.com</span><span>contactus@dallandpartners.com · WhatsApp +351 920 460 005</span></footer>'; }
 
 /* ========== WEBSITE ========== */
-var SITE_PAGES = [['site:home', 'Homepage'], ['site:thankyou', 'Thank You page'], ['site:finder', 'Program Finder'], ['site:guide', 'Free guide'], ['site:blog', 'Blog post']];
+var SITE_PAGES = [['site:home', 'Homepage'], ['site:consult', 'Consultation page'], ['site:thankyou', 'Thank You page'], ['site:finder', 'Program Finder'], ['site:guide', 'Free guide'], ['site:blog', 'Blog post']];
 function siteView() {
   var v = R.view, html = '', url = 'dallandpartners.com/';
   if (v === 'home') {
-    html = '<section class="hero"><div class="kicker">Citizenship and residency advisory</div><h1>Leaders in Global Mobility</h1><p>Second citizenship, European residency and remote-work visas for investors, entrepreneurs and families.</p><div class="ctas"><button class="btn btn-gold" data-act="consult">Book a Consultation</button><button class="btn btn-ghost" data-go="site:finder">Find your program in 60 seconds</button></div></section>' +
-      '<div class="s-sec">' + note('every “Book a Consultation” and “Schedule a Consultation” button on dallandpartners.com opens this same consultation form in a popup. Try it: the enquiry appears in the <b>CRM</b> tab.') +
+    html = '<section class="hero"><div class="kicker">Citizenship and residency advisory</div><h1>Leaders in Global Mobility</h1><p>Second citizenship, European residency and remote-work visas for investors, entrepreneurs and families.</p><div class="ctas"><button class="btn btn-gold" data-go="site:consult">Book a Consultation</button><button class="btn btn-ghost" data-go="site:finder">Find your program in 60 seconds</button></div></section>' +
+      '<div class="s-sec">' + note('every “Book a Consultation” and “Schedule a Consultation” button on dallandpartners.com takes visitors to the consultation page. Try it: the enquiry appears in the <b>CRM</b> tab.') +
       '<h2>How it works</h2><p class="lead">From first question to approved application.</p><div class="steps3">' +
       '<div class="step"><div class="n">1</div><h3>Complete the online assessment</h3><p>Five questions match you with the right programs.</p><p style="margin-top:10px"><button class="box go" data-go="site:finder">Take the assessment</button></p></div>' +
-      '<div class="step"><div class="n">2</div><h3>Book your consultation</h3><p>A free 30-minute call with an advisor.</p><p style="margin-top:10px"><button class="box go" data-act="consult">Book now</button></p></div>' +
+      '<div class="step"><div class="n">2</div><h3>Book your consultation</h3><p>A free 30-minute call with an advisor.</p><p style="margin-top:10px"><button class="box go" data-go="site:consult">Book now</button></p></div>' +
       '<div class="step"><div class="n">3</div><h3>Approval and permit issuance</h3><p>We prepare, file and follow your case to approval.</p></div></div>' +
       '<div style="margin-top:22px" class="banner"><div><b>Comparing programs?</b> Download the free 2026 comparison of all 25 programs.</div><button class="btn btn-gold btn-sm" data-go="site:guide">Get the free guide</button></div>' +
       '<h2 style="margin-top:34px">Latest insights</h2><div class="grid3"><div class="box"><h3>Is Türkiye really the strongest CBI passport?</h3><p>What visa-free access really means for investors.</p><button class="go" data-go="site:blog">Read article</button></div><div class="box"><h3>Latvia Golden Visa 2026: what changed</h3><p>The company and state fund routes explained.</p><button class="go" data-go="site:blog">Read article</button></div><div class="box"><h3>Residency without moving</h3><p>Programs with little or no minimum stay.</p><button class="go" data-go="site:blog">Read article</button></div></div></div>';
+  }
+  if (v === 'consult') {
+    url = 'dallandpartners.com/book-a-consultation' + (R.prefill ? '?details=…&program=…' : '');
+    html = '<div class="s-sec" style="padding-bottom:0">' + note('every “Book a Consultation” and “Schedule a Consultation” button on dallandpartners.com links to this page. After sending, visitors go to the Thank You page.') + '</div>' + consultForm(R.prefill);
   }
   if (v === 'thankyou') {
     url = 'dallandpartners.com/thank-you';
@@ -564,7 +568,7 @@ function siteView() {
       '<h2>What happens next</h2><div class="steps3" style="margin-bottom:30px"><div class="step"><div class="n">1</div><h3>We review your profile</h3><p>An advisor checks your goals, budget and family against current program rules.</p></div><div class="step"><div class="n">2</div><h3>We contact you</h3><p>Expect an email or WhatsApp message within 1 business day.</p></div><div class="step"><div class="n">3</div><h3>You get a clear plan</h3><p>On your call, we confirm eligibility, costs and timelines in writing.</p></div></div>' +
       '<div class="split"><div><h2>Prefer to pick a time now?</h2><p class="lead">Choose a slot for your free 30-minute consultation. You’ll get a confirmation and a reminder before the call.</p><ul class="ticks"><li>30 minutes by video or WhatsApp call</li><li>Times shown in your own time zone</li><li>Free, confidential and with no obligation</li></ul></div><div>' + bookingWidget('site') + '</div></div></div>';
   }
-  if (v === 'finder') { url = 'dallandpartners.com/program-finder'; html = '<div class="s-sec" style="max-width:900px">' + note('this is the real Program Finder logic with all 25 programs. “Get my shortlist” opens the consultation form with the answers typed in, and the lead is added to the <b>Program Finder leads</b> list.') + quizView() + '</div>'; }
+  if (v === 'finder') { url = 'dallandpartners.com/program-finder'; html = '<div class="s-sec" style="max-width:900px">' + note('this is the real Program Finder logic with all 25 programs. “Get my shortlist” opens the consultation page with the answers already typed into the form.') + quizView() + '</div>'; }
   if (v === 'guide') {
     url = 'dallandpartners.com/program-comparison-guide';
     html = '<section class="hero" style="text-align:left;padding:48px 28px"><div style="max-width:1080px;margin:0 auto" class="split"><div><div class="kicker">Free guide</div><h1 style="margin-left:0">Citizenship &amp; Residency Program Comparison 2026</h1><p style="margin-left:0">All 25 programs we advise on, compared side by side across 19 countries.</p><ul class="ticks" style="--x:0"><li style="color:#fff">Side-by-side tables of all 25 programs</li><li style="color:#fff">Which programs fit your goal</li><li style="color:#fff">A short profile of every program</li><li style="color:#fff">What changed in 2022–2026</li></ul></div>' +
@@ -575,12 +579,12 @@ function siteView() {
     url = 'dallandpartners.com/guide-download';
     html = '<div class="s-sec" style="text-align:center;max-width:700px"><h2>Your guide is ready</h2><p class="lead">Thank you. Download the Citizenship &amp; Residency Program Comparison 2026 below; we’ve also sent a copy to your inbox.</p><button class="btn btn-gold" data-act="pdf">Download the guide (PDF)</button>' +
       note('the button opens the real 25-program PDF. The download link is also emailed (Email 1 of the follow-up series).') +
-      '<div class="banner" style="margin-top:24px;text-align:left"><div><b>Want help choosing?</b> Book a free consultation with our advisors.</div><button class="btn btn-gold btn-sm" data-act="consult">Book a Consultation</button></div></div>';
+      '<div class="banner" style="margin-top:24px;text-align:left"><div><b>Want help choosing?</b> Book a free consultation with our advisors.</div><button class="btn btn-gold btn-sm" data-go="site:consult">Book a Consultation</button></div></div>';
   }
   if (v === 'blog') {
     url = 'dallandpartners.com/is-turkiye-the-strongest-cbi-passport';
     html = '<div class="s-sec article"><p class="small">Home › Blogs › Citizenship</p><h2 style="font-size:32px">Is Türkiye Really the Strongest Citizenship-by-Investment Passport?</h2><p class="small">By Farrukh Dall · 6 min read</p><p>Most citizenship-by-investment comparisons start with one question: how many countries can I enter without a visa? It’s an easy number to rank, but it ignores what happens after you arrive…</p><p>(Article text continues.)</p>' +
-      '<div class="nextstep"><div class="k">Next step</div><h3>Which citizenship program fits your family?</h3><p>Answer five quick questions and get your top matches from Türkiye, Dominica, Nauru and Vanuatu, with costs and timelines.</p><div class="row"><button class="btn btn-gold btn-sm" data-go="site:finder">Take the 60-second assessment</button><button class="btn btn-ghost btn-sm" data-act="consult">Book a consultation</button></div></div>' +
+      '<div class="nextstep"><div class="k">Next step</div><h3>Which citizenship program fits your family?</h3><p>Answer five quick questions and get your top matches from Türkiye, Dominica, Nauru and Vanuatu, with costs and timelines.</p><div class="row"><button class="btn btn-gold btn-sm" data-go="site:finder">Take the 60-second assessment</button><button class="btn btn-ghost btn-sm" data-go="site:consult">Book a consultation</button></div></div>' +
       note('this “Next step” box appears automatically at the end of every blog post. Its message changes with the post’s category: Golden Visa posts offer the guide, citizenship posts offer the assessment, entrepreneur posts offer a consultation, and so on.') + '</div>';
   }
   var cur = 'site:' + (v === 'guidedone' ? 'guide' : v);
@@ -634,17 +638,17 @@ function quizResults() {
 }
 
 /* ---------- consultation form (modal) ---------- */
-function consultModal(prefill) {
-  return '<div class="overlay" data-close="1"><div class="modal dark" role="dialog" aria-modal="true" aria-labelledby="cm-h"><div class="modal-h"><div><div class="kicker">Confidential private client inquiry</div><h2 id="cm-h">Book a Strategic Consultation</h2></div><button class="x" data-act="close" aria-label="Close">×</button></div><form class="modal-b" data-form="consult">' +
+function consultForm(prefill) {
+  return '<section style="background:var(--navy);padding:40px 20px 50px"><div class="modal dark" style="margin:0 auto;box-shadow:none;border:1px solid #24314A"><div class="modal-h"><div><div class="kicker">Confidential private client inquiry</div><h2 id="cm-h">Book a Strategic Consultation</h2></div></div><form class="modal-b" data-form="consult">' +
     '<div class="fgrid"><div class="f"><label for="c-n">Full name <span class="req">*</span></label><input id="c-n" name="name" required value="Hassan Raza"></div><div class="f"><label for="c-e">Email address <span class="req">*</span></label><input id="c-e" name="email" type="email" required value="hassan.raza@example.com"></div>' +
     '<div class="f"><label for="c-p">Phone number <span class="req">*</span></label><input id="c-p" name="phone" required value="+92 321 7654321"></div><div class="f"><label for="c-pr">Program of interest</label><select id="c-pr" name="program">' + ['Not sure – compare programs for me', 'Citizenship by Investment', 'Golden Visa / Residency by Investment', 'Real Estate Residency', 'Entrepreneur / Business Visa', 'Retirement / Passive Income Visa', 'Digital Nomad / Remote Work Visa'].map(function (o) { return '<option' + (prefill && prefill.program === o ? ' selected' : '') + '>' + o + '</option>'; }).join('') + '</select></div>' +
     '<div class="f"><label for="c-b">Budget range</label><select id="c-b" name="budget">' + ['Not sure yet', 'No investment – income or savings', 'Under US$50,000', 'US$50,000 – US$150,000', 'US$150,000 – US$300,000', 'US$300,000 – US$600,000', 'US$600,000 – US$1 million', 'Over US$1 million'].map(function (o, i) { return '<option' + (i === 5 ? ' selected' : '') + '>' + o + '</option>'; }).join('') + '</select></div>' +
     '<div class="f"><label for="c-t">When do you want to start?</label><select id="c-t" name="timeline"><option>Immediately (within 1 month)</option><option selected>In 1–3 months</option><option>In 3–6 months</option><option>In 6–12 months</option><option>Just researching for now</option></select></div>' +
     '<div class="f full"><label for="c-m">Specific objectives or family details</label><textarea id="c-m" name="message">' + esc(prefill ? prefill.message : 'Applying with my wife and two children; interested in Schengen travel.') + '</textarea></div>' +
     '<label class="chk full"><input type="checkbox" required checked> <span>I agree to Dall &amp; Partners contacting me about my enquiry and sending occasional program updates.</span></label></div>' +
-    note('the phone field shows a country-code dropdown. Every submission is saved in the CRM automatically, with its source.') +
+    note('the phone field shows a country-code dropdown. Every submission is saved in the CRM automatically, with its source.' + (prefill ? ' The Program Finder answers were filled in from the page address by a small script on this page.' : '')) +
     manual('program and budget <b>tags</b> aren’t added automatically on the free version. The answers are still saved on the contact; an advisor adds the tags (CRM → contact → Tags).') +
-    '<button class="btn btn-gold" type="submit" style="margin-top:6px">Confirm booking</button></form></div></div>';
+    '<button class="btn btn-gold" type="submit" style="margin-top:6px">Confirm booking</button></form></div></section>';
 }
 
 /* ========== CRM (staff) ========== */
@@ -662,9 +666,9 @@ function crmView() {
     var src = {}; S.contacts.forEach(function (c) { src[c.source] = (src[c.source] || 0) + 1; });
     var max = Math.max.apply(null, Object.keys(src).map(function (k) { return src[k]; }).concat([1]));
     h = '<h1>Overview</h1>' + note('this is the WordPress admin of dallandpartners.com. Staff screens use the free FluentCRM, FluentBooking and Fluent Boards plugins; shown here as a simplified representation.') +
-      manual('the free plugins don’t have one combined dashboard like this. These figures come from three places: contacts in FluentCRM, bookings in FluentBooking, and the “Won” column in Fluent Boards. Leads by source are counted by filtering contacts by their Source tag or Lead source field.') +
+      note('the free plugins don’t include a combined screen like this, so it’s added with a small custom snippet (dp-staff-overview.php, menu “D&P Overview”). It reads the figures live from FluentCRM (contacts, lists, tags), FluentBooking (bookings) and Fluent Boards (the “Won” column).') +
       '<div class="cards4"><div class="stat"><b>' + S.contacts.length + '</b><span>Contacts</span></div><div class="stat"><b>' + wk + '</b><span>New this week</span></div><div class="stat"><b>' + S.bookings.length + '</b><span>Consultations booked</span></div><div class="stat"><b>' + won + '</b><span>Clients won</span></div></div>' +
-      '<div class="panel"><h2 style="margin-top:0">Leads by source (contact filter counts)</h2>' + Object.keys(src).map(function (k) { return '<div class="row" style="margin:6px 0"><span style="width:130px">' + esc(k) + '</span><div class="prog" style="flex:1;max-width:420px"><i style="width:' + (src[k] / max * 100) + '%;background:#2271b1"></i></div><b>' + src[k] + '</b></div>'; }).join('') + '<p class="small">Sources come from the form’s hidden tracking fields, or the Source tag for contacts added by hand.</p></div>' +
+      '<div class="panel"><h2 style="margin-top:0">Leads by source</h2>' + Object.keys(src).map(function (k) { return '<div class="row" style="margin:6px 0"><span style="width:130px">' + esc(k) + '</span><div class="prog" style="flex:1;max-width:420px"><i style="width:' + (src[k] / max * 100) + '%;background:#2271b1"></i></div><b>' + src[k] + '</b></div>'; }).join('') + '<p class="small">Program Finder and Guide download count their lists; WhatsApp, Referral and Phone count their Source tags; Consultation page counts the remaining consultation enquiries.</p></div>' +
       '<div class="panel"><h2 style="margin-top:0">Latest contacts</h2>' + contactTable(S.contacts.slice().sort(function (a, b) { return new Date(b.created) - new Date(a.created); }).slice(0, 5)) + '</div>' +
       manual('there are no revenue or deal-value charts on the free versions. If the partners want revenue figures, keep them in a shared spreadsheet.');
   }
@@ -854,7 +858,7 @@ function clientPortal() {
     var shared = cs.files.filter(function (f) { return f.shared; });
     inner = '<div class="portal-wrap"><h2 style="color:var(--ink);margin:0 0 4px">Welcome, ' + esc(cs.client.split(' ')[0]) + '</h2><p class="small" style="margin:0 0 18px">' + esc(cs.program) + ' · Case team: ' + esc(cs.team.join(', ')) + '</p>' +
       note('this is the client’s dashboard page after login. On the free version, the detailed case view opens inside the portal’s dashboard area.') +
-      '<div class="pgrid"><div><div class="pcard"><h3>My case</h3><p style="margin:0 0 12px">' + esc(cs.program) + '<br><span class="small">Case team: ' + esc(cs.team.join(', ')) + '</span></p><button class="btn btn-gold btn-sm" data-act="client-case">Open my case</button>' + note('“Open my case” shows the case’s stages, tasks, progress and files. On the free version it opens inside the portal’s dashboard area.') + '</div>' +
+      '<div class="pgrid"><div><div class="pcard"><h3>My case <span class="pill gold">' + p + '% complete</span></h3><ol class="stages" style="margin-bottom:12px">' + cs.lists.map(function (l, i) { var cls = i < nowIdx || nowIdx === -1 ? 'done' : i === nowIdx ? 'now' : ''; return '<li class="' + cls + '"><span class="s">' + (cls === 'done' ? '✓' : (i + 1)) + '</span><div><b>' + esc(l.name.replace(/^\d\.\s/, '')) + '</b><div class="small">' + (cls === 'done' ? 'Completed' : cls === 'now' ? 'In progress' : 'Coming up') + '</div></div></li>'; }).join('') + '</ol><button class="btn btn-gold btn-sm" data-act="client-case">Open my case</button>' + note('this dashboard is built by a small custom snippet (dp-client-portal.php) that reads the case’s stages and progress from WP Project Manager. “Open my case” shows the tasks, key dates and files; on the free version it opens inside the portal’s dashboard area.') + '</div>' +
       '<div class="pcard"><h3>My documents</h3>' + shared.map(function (f) { return '<div class="doc"><span>📄 ' + esc(f.name) + '</span><button class="btn btn-line btn-sm" data-act="dl">Download</button></div>'; }).join('') + '<div class="row" style="margin-top:12px"><button class="btn btn-line btn-sm" data-act="client-case-files">Upload documents in my case</button></div>' + manual('clients upload documents in their case’s Files area, not in this private document list.') + '</div></div>' +
       '<div><div class="pcard"><h3>Messages</h3><div class="msgs" style="max-height:240px;padding:0 0 8px">' + cs.messages.map(function (m) { return '<div class="msg' + (m.me ? ' me' : '') + '">' + esc(m.text) + '<small>' + esc(m.by) + '</small></div>'; }).join('') + '</div><form class="chat-in" style="padding:8px 0 0" data-form="clientmsg"><input class="inp" name="t" aria-label="Message your case team" placeholder="Message your case team" required><button class="btn btn-gold btn-sm" type="submit">Send</button></form></div>' +
       '<div class="pcard"><h3>Book a case update call</h3>' + bookingWidget('portal') + '</div>' +
@@ -898,7 +902,7 @@ function addContactModal() {
     '<div class="fgrid"><div class="f"><label for="first">First name <span class="req">*</span></label><input id="first" name="first" required value="Yusuf"></div><div class="f"><label for="last">Last name</label><input id="last" name="last" value="Demir"></div>' +
     '<div class="f"><label for="email">Email <span class="req">*</span></label><input id="email" name="email" type="email" required value="yusuf.demir@example.com"></div><div class="f"><label for="phone">Phone</label><input id="phone" name="phone" value="+90 532 123 4567"></div>' +
     '<div class="f"><label for="country">Country</label><input id="country" name="country" value="Türkiye"></div>' +
-    sel('source', 'Lead source', ['WhatsApp', 'Phone', 'Referral', 'Website popup', 'Event'], 'WhatsApp') +
+    sel('source', 'Lead source', ['WhatsApp', 'Phone', 'Referral', 'Consultation page', 'Event'], 'WhatsApp') +
     sel('program', 'Program of interest', ['Not sure – compare programs for me', 'Citizenship by Investment', 'Golden Visa / Residency by Investment', 'Real Estate Residency', 'Entrepreneur / Business Visa', 'Retirement / Passive Income Visa', 'Digital Nomad / Remote Work Visa'], 'Golden Visa / Residency by Investment') +
     sel('budget', 'Budget range', ['Not sure yet', 'No investment – income or savings', 'Under US$50,000', 'US$50,000 – US$150,000', 'US$150,000 – US$300,000', 'US$300,000 – US$600,000', 'US$600,000 – US$1 million', 'Over US$1 million'], 'US$300,000 – US$600,000') +
     sel('timeline', 'Timeline', ['Immediately (within 1 month)', 'In 1–3 months', 'In 3–6 months', 'In 6–12 months', 'Just researching for now'], 'In 1–3 months') +
@@ -953,8 +957,7 @@ document.addEventListener('click', function (e) {
   if (el.dataset.rmtag) { var c0 = contact(R.id); c0.tags = c0.tags.filter(function (t) { return t !== el.dataset.rmtag; }); save(); render(); return; }
   var a = el.dataset.act, c = R.id ? contact(R.id) : null;
   switch (a) {
-    case 'consult': openModal(consultModal()); break;
-    case 'consult-quiz': openModal(consultModal({ message: QZ.summary, program: QZ.program && /Citizenship/.test(QZ.program) ? 'Citizenship by Investment' : /Residency by/.test(QZ.program) ? 'Golden Visa / Residency by Investment' : /Real Estate/.test(QZ.program) ? 'Real Estate Residency' : /Entrepreneur/.test(QZ.program) ? 'Entrepreneur / Business Visa' : /Independent/.test(QZ.program) ? 'Retirement / Passive Income Visa' : /Nomad/.test(QZ.program) ? 'Digital Nomad / Remote Work Visa' : '' })); break;
+    case 'consult-quiz': R.prefill = { message: QZ.summary, program: QZ.program && /Citizenship/.test(QZ.program) ? 'Citizenship by Investment' : /Residency by/.test(QZ.program) ? 'Golden Visa / Residency by Investment' : /Real Estate/.test(QZ.program) ? 'Real Estate Residency' : /Entrepreneur/.test(QZ.program) ? 'Entrepreneur / Business Visa' : /Independent/.test(QZ.program) ? 'Retirement / Passive Income Visa' : /Nomad/.test(QZ.program) ? 'Digital Nomad / Remote Work Visa' : '' }; go('site', 'consult'); break;
     case 'close': closeModal(); break;
     case 'close-welcome': closeModal(); try { localStorage.setItem(KEY + '-seen', '1'); } catch (x) {} break;
     case 'q-back': QZ.step = Math.max(0, QZ.step - 1); render(); break;
@@ -1038,12 +1041,12 @@ document.addEventListener('change', function (e) {
 document.addEventListener('submit', function (e) {
   var f = e.target, fd = {}; e.preventDefault();
   Array.prototype.forEach.call(f.elements, function (x) { if (x.name) fd[x.name] = x.value; });
-  if (f.dataset.form === 'consult') { addContactFromForm(fd, 'Website popup'); closeModal(); BK = { day: null, time: null, done: null }; go('site', 'thankyou'); }
+  if (f.dataset.form === 'consult') { addContactFromForm(fd, 'Consultation page'); R.prefill = null; BK = { day: null, time: null, done: null }; go('site', 'thankyou'); }
   if (f.dataset.form === 'guide') { addContactFromForm(fd, 'Guide download'); go('site', 'guidedone'); }
   if (f.dataset.form === 'chat') { var txt = fd.t; if (R.chat === 'team') S.team.push({ by: 'Khushbakht H.', text: txt, date: iso(new Date()) }); else { var cs = S.cases.filter(function (x) { return x.id === R.chat; })[0]; cs.messages.push({ by: 'Khushbakht H.', me: false, text: txt, date: iso(new Date()) }); } save(); render(); }
   if (f.dataset.form === 'clientlogin') { R.clientIn = true; render(); }
   if (f.dataset.form === 'addcontact') {
-    var srcTag = { WhatsApp: 'Source – WhatsApp', Phone: 'Source – phone', Referral: 'Source – referral', 'Website popup': 'Source – website' }[fd.source];
+    var srcTag = { WhatsApp: 'Source – WhatsApp', Phone: 'Source – phone', Referral: 'Source – referral', 'Consultation page': 'Source – website' }[fd.source];
     var nc = { id: uid(), name: (fd.first + ' ' + (fd.last || '')).trim(), email: fd.email, phone: fd.phone, country: fd.country, program: fd.program, budget: fd.budget, timeline: fd.timeline, source: fd.source,
       lists: [fd.list], tags: srcTag ? [srcTag] : [], status: 'Subscribed', created: iso(new Date()), advisor: '', notes: [], emails: [], seq: null, message: '' };
     S.contacts.push(nc); save(); closeModal(); go('crm', 'contact', nc.id); toast('Contact added');
@@ -1066,7 +1069,7 @@ load();
 function fromHash() {
   var h = (location.hash || '').replace('#', ''); if (!h) return false;
   var p = h.split('-'), area = p[0], view = p.slice(1).join('-');
-  var ok = { site: ['home', 'thankyou', 'finder', 'guide', 'blog'], crm: ['dash', 'contacts', 'lists', 'automations', 'reminders', 'bookings', 'availability', 'pipeline', 'manual'], portal: ['projects', 'mytasks', 'calendar', 'chat', 'client'] };
+  var ok = { site: ['home', 'consult', 'thankyou', 'finder', 'guide', 'blog'], crm: ['dash', 'contacts', 'lists', 'automations', 'reminders', 'bookings', 'availability', 'pipeline', 'manual'], portal: ['projects', 'mytasks', 'calendar', 'chat', 'client'] };
   if (!ok[area] || ok[area].indexOf(view) < 0) return false;
   R.area = area; R.view = view; R.id = null; R.tab = 'overview';
   if (area === 'portal' && view === 'project') return false;
